@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .content {
+	  margin: auto;
+	  width: 60%;
+	  padding: 10px;
+      }
+    </style>
+    <title>La_Granja_SA</title>
+  </head>
+  <body>
+    <h1>Digital Recognition</h1>
+    <br>
+    <form action = "/" method = "POST" enctype = "multipart/form-data">
+      <input type="file" name="file" id="File" onclick="MyFun()"/>
+      <br><br>
+      <div class="ok" id="ok" style="display:none">
+	<input id="OK" type="submit" value="Analyze"/>
+      </div>
+      <p id = "GFG_DOWN" style="color:green; font-size: 11px; font-weight: bold;">
+      </p>
+      <script>
+	var down = document.getElementById('GFG_DOWN'); 
+	var file = document.getElementById("File");
+	var Up = document.getElementById("ok")
+	function MyFun() {
+	    if(file.files.length == 0 ){
+		down.innerHTML = "No files selected";
+		Up.style.display = "block";		   
+            } else {
+		Up.style.display = "block";		   
+	    }
+        }
+      </script>
+      <br>
+      <div class="content" style="width:800px; margin:0 auto;">
+      <h3>USAGE:</h3>
+      <h4>1) Please click on "Choose file" button</h4>
+      <h4>2) Upload an image containing an ORANGE fruit (jpg)</h4>
+      <h4>3) click on the button "Analyze".</h4>
+      <br>
+      <p>This Project is a computer technology related to computer vision and image processing that detects and defines objects like an Orange. This program has the ability to classify just one or several objects within a digital image at once.
+Artificial Intelligence has been around for years, but it is becoming more apparent across a range of industries now more than ever before.
+      </p>
+      </div>
+      <br><br>
+<a target="_blank" href="https://www.holbertonschool.com/">Holberton</a>
+    </form>
+  </body>
+</html>
