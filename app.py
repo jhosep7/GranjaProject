@@ -2,10 +2,8 @@ from ObjectDetector import Detector
 import io
 from flask import Flask, render_template, request, send_file
 from PIL import Image
-from flask_cors import CORS
 
 app = Flask(__name__)
-cors = CORS(app)
 Scanner = Detector()
 
 
@@ -24,4 +22,4 @@ def upload():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run()
