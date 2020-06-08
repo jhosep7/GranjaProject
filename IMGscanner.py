@@ -35,6 +35,6 @@ class Detector:
                     labelSize, baseLine = cv.getTextSize(label, cv.FONT_HERSHEY_SIMPLEX, 0.5, 2)
                     yLeftBottom = max(yLeftBottom, labelSize[1])
                     cv.putText(img, label, (xLeftBottom+5, yLeftBottom), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 2)
+        Count = cv.putText(img, ("{}".format(counter)), (10, 25), cv.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv.LINE_AA, False) 
         img = cv.imencode('.jpg', img)[1].tobytes()
-        print("Found {0} fruits!".format(counter))
         return img
