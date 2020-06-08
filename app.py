@@ -1,4 +1,4 @@
-from ObjectDetector import Detector
+from IMGscanner import Detector
 import io
 from flask import Flask, render_template, request, send_file
 from PIL import Image
@@ -22,4 +22,4 @@ def upload():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
