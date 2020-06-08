@@ -10,7 +10,7 @@
     </style>
     <title>La_Granja_SA</title>
   </head>
-  <body>
+  <body style="background-color:#E6E6FA;">
     <h1>Digital Recognition</h1>
     <br>
     <form action = "/" method = "POST" enctype = "multipart/form-data">
@@ -27,10 +27,11 @@
 	var Up = document.getElementById("ok")
 	function MyFun() {
 	    if(file.files.length == 0 ){
-		down.innerHTML = "No files selected";
+		down.innerHTML = "Choose a picture";
 		Up.style.display = "block";		   
             } else {
-		Up.style.display = "block";		   
+		Up.style.display = "block";
+		file.files.length == 0;
 	    }
         }
       </script>
