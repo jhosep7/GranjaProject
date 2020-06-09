@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy
 
 
-MyDict = {55: 'orange'}
+MyDict = {55: ''}
 
 
 class Detector:
@@ -31,7 +31,7 @@ class Detector:
                     cv.rectangle(img, (xLeftBottom, yLeftBottom), (xRightTop, yRightTop), (0, 255, 0), 2)
                 if class_id in MyDict:
                     counter += 1
-                    label = MyDict[class_id] + " :"
+                    label = MyDict[class_id] + ""
                     labelSize, baseLine = cv.getTextSize(label, cv.FONT_HERSHEY_SIMPLEX, 0.5, 2)
                     yLeftBottom = max(yLeftBottom, labelSize[1])
                     cv.putText(img, label, (xLeftBottom+5, yLeftBottom), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 2)
