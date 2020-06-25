@@ -8,8 +8,8 @@ MyDict = {55: ''}
 class Detector:
     def __init__(self):
         global cvNet
-        cvNet = cv.dnn.readNetFromTensorflow('model/frozen_inference_graph.pb',
-                                             'model/ssd_mobilenet_v1_coco_2017_11_17.pbtxt')
+        cvNet = cv.dnn.readNetFromTensorflow('model/FaberModel.pb',
+                                             'model/FaberModelCoco.pbtxt')
 
     def detectObject(self, imName):
         img = cv.cvtColor(numpy.array(imName), cv.COLOR_BGR2RGB)
@@ -31,10 +31,10 @@ class Detector:
                     cv.rectangle(img, (xLeftBottom, yLeftBottom), (xRightTop, yRightTop), (0, 255, 0), 2)
                 if class_id in MyDict:
                     counter += 1
-                    label = MyDict[class_id] + ""
+                    label = MyDict[class_id] + "Ok"
                     labelSize, baseLine = cv.getTextSize(label, cv.FONT_HERSHEY_SIMPLEX, 0.5, 2)
                     yLeftBottom = max(yLeftBottom, labelSize[1])
                     cv.putText(img, label, (xLeftBottom+5, yLeftBottom), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 2)
-        Count = cv.putText(img, ("{}".format(counter)), (10, 25), cv.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv.LINE_AA, False) 
+        Count = cv.putText(img, ("{}".format(counter)), (40, 90), cv.FONT_HERSHEY_SIMPLEX, 3, (243,219,123), 5, cv.LINE_AA, False) 
         img = cv.imencode('.jpg', img)[1].tobytes()
         return img

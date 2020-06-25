@@ -1,0 +1,23 @@
+#contenido h3,h4{
+	text-align: center;
+}
+
+#contenido .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#contenido article{
+	margin: 15px; 
+}
+
+#contenido img{
+	width: 100%;
+	max-width: 280px;
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+}
+

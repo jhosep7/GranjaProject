@@ -1,0 +1,23 @@
+#files h3,h4{
+	text-align: center;
+}
+
+#files .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-size: 18px;
+}
+
+#files article{
+	margin: 15px; 
+}
+
+#files img{
+	width: 100%;
+	max-width: 280px;
+}
+
+#files form{
+	
+}
